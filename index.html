@@ -3,43 +3,61 @@
 <head>
     <title> Raving Craving </title>
     <meta charset="utf-8">
-    <div class="palign">
-      <h1 class="htwo">Raving Craving</h1>
-      <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/R-removebg-preview.png" width=100px height=100px align ="left" class="htwo"/>
-    </div>
-    <style>
-      body{background-color: white;}
-      h1{
-        color: #4E4187;<!>
-        font-family: monospace;
-        color: #559cad;
-        text-align: center;
-        position: relative;
-        display: inline-flex;
-      }
-      img{
-        float: left;
-        top: 18px;
-        left: 10px;
-      }
-      p{
-        font-family: monospace;
-        color: #274690;
-      }
-      .htwo{
-        color: black;
-        height: 100px;
-        background-image: linear-gradient(white,#559cad);
-      }
-    </style>
 </head>
+<header>
+  <div class="palign">
+    <h1>Raving Craving</h1>
+    <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/R-removebg-preview.png" width=100px height=100px align ="left"/>
+  </div>
+  <style>
+    head{
+      background-image: linear-gradient(white,#559cad);
+    }
+    body{
+      background-color: white;
+      background-image: linear-gradient(white,#559cad);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    h1{
+      color: #938581;<!>
+      font-family: monospace;
+      <!color: #559cad;>
+      text-align: center;
+      position: relative;
+      display: inline-flex;
+      margin: auto;
+      align-items: center;
+      margin-right: 100px;
+    }
+    img{
+      float: left;
+      top: 18px;
+      left: 10px;
+    }
+    p{
+      font-family: monospace;
+      color: #274690;
+    }
+    .htwo{
+      color: black;
+      height: 100px;
+      background-image: linear-gradient(white,#559cad);
+    }
+    .vertline{
+      border-left: 6px;
+      border-left-color: #373F51;
+      height: 300px;
+    }
+  </style>
+</header>
 <body>
     <style>
       .palign
       {
         text-align: center;
         color: #ffffff;
-        border-color: #559cad;
+        border-color: ##373F51;
       }
       .vertMenu
       {
@@ -49,15 +67,46 @@
       p{
 
       }
+      .split {
+        height: 90%;
+        width: 91%;
+        position:fixed;
+        z-index: 1;
+        top: 200;
+        overflow-x: hidden;
+        padding-top: 30px;
+      }
+      .lsplit{
+        padding-top: 0px;
+        right: 0;
+        border-style: double;
+        border-color: white;
+        border-radius: 10px;
+        background-blend-mode: screen;
+        background-color: white;
+        border-left: yellow;
+      }
+      .buttons{
+        top: 100px;
+        border-color: #f1fad1;
+        color: black;
+      }
     </style>
   <div class="palign">
 <!<img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/R-removebg-preview.png" width=100px height=100px align ="left"/>
-<p> Finding the Perfect Meal</p>
+<p></p>
 </div>
 
-<div class="vertMenu">
-  <a href = "#">Home</a>
+<div class="split buttons">
+  <a href = "#"><button>Home</button> </a>
   <a href ="#">About</a>
 </div>
+<div class="split lsplit">
+
+    <p>Find your Perfect Meal</p>
+</div>
 </body>
+<footer>
+
+</footer>
 </html>
