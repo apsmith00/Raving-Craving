@@ -4,6 +4,9 @@
     <title> Raving Craving </title>
     <meta charset="utf-8">
     <basefont face ="Playfair Display","Verdana">
+      <style>
+        body{background-color: black;}
+      </style>
 </head>
 <body>
   <style>
@@ -16,7 +19,7 @@
       "leftSide body rightSide" 1fr
       "footer footer footer" auto
       / auto 1fr auto;
-    gap: 8px;
+    gap: 0px;
     }
     .header {
       grid-area: header;
@@ -26,16 +29,29 @@
     }
     .leftSide {
       grid-area: leftSide;
+      width: 100px;
+      background-color: black;
+      color: #f1fad1;
+      border-color: #559cad;
+      border: none;
+      text-align: center;
     }
     .body{
       grid-area: body;
+      height: 500px;
+      background-color: #559cad;
+      border: double;
+      border-color: #f1fad1;
     }
   .rightSide{
       grid-area: rightSide;
     }
   .footer {
     grid-area: footer;
-    background-color: black;
+    background-color: white;
+    border: solid;
+    border-top: #559cad;
+    height: 10px;
   }
   h1{
         background-color:black;
@@ -63,14 +79,27 @@
     font-family: monospace;
     color: #274690;
   }
-  .hbutton{
-    display: inline-block;
+  button{
+    display: inline-flex;
     text-align: center;
-    border: none;
-    background-color: #f1fad1;
+    border: double;
+    background-color: #559cad;
     color: white;
     border-radius: 8px;
-    z-index: 2;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    float: right;
+    height: 60px;
+    width: 150px;
+    right: 50px;
+    top: 30px;
+    text-decoration: underline;
+    font-size: 25px;
+    font-family: inherit;
+
   }
   </style>
 <!-------------container-------------->
@@ -78,14 +107,12 @@
     <div class="header">
       <div>
         <h1>Raving Craving</h1>
-        <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/RCLogo_Final-removebg-preview.png" width=100px height=100px align ="left"/>
-        <button class="hbutton">
-          About Us
-        </button>
+        <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/RCLogo_Final-removebg-preview.png" width=120px height=120px align ="left"/>
+        <button type="button">About Us</button>
       </div>
     </div>
     <div class="leftSide">
-
+        <h3>Filters</h3>
     </div>
     <div class="body">
 
