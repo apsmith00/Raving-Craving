@@ -48,10 +48,11 @@
     }
   .footer {
     grid-area: footer;
-    background-color: white;
-    border: solid;
+    background-color: black;
+    border: EnableCodeIndexing;
     border-top: #559cad;
-    height: 10px;
+    height: auto;
+    color: #f1fad1;
   }
   h1{
         background-color:black;
@@ -97,9 +98,51 @@
     right: 50px;
     top: 30px;
     text-decoration: underline;
-    font-size: 25px;
+    font-size: 22px;
     font-family: inherit;
-
+    transition-duration: .4s;
+    cursor: pointer;
+  }
+  .abutton:hover {
+    background-color: black;
+    color: #559cad;
+  }
+  input[type=text]{
+    position: relative;
+    float: left;
+    width: 80%;
+    height: 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color: #f1fad1;
+    background-color: black;
+    border: double;
+    border-radius: 8px;
+    top: 50%;
+  }
+  .sbutton{<!search bar button>
+    display:inline-grid;
+    text-align: center;
+    border: double;
+    background-color: #559cad;
+    color: white;
+    border-radius: 8px;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    float: left;
+    height: 50px;
+    top:50%;
+    width: 19%;
+  }
+  input[type=text]:focus {
+  width: 80%;
+  }
+  form{
+    top: 50%;
+    position: relative;
   }
   </style>
 <!-------------container-------------->
@@ -108,20 +151,22 @@
       <div>
         <h1>Raving Craving</h1>
         <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/RCLogo_Final-removebg-preview.png" width=120px height=120px align ="left"/>
-        <button type="button">About Us</button>
+        <button type="button" class="button abutton">About Us</button>
       </div>
     </div>
     <div class="leftSide">
-        <h3>Filters</h3>
     </div>
     <div class="body">
-
+      <form action="">
+        <input type="text" placeholder="example search : Salmon" name="search">
+        <button type="submit" class= "sbutton abutton"><i>Search</i></button>
+      </form>
     </div>
     <div class="rightSide">
 
     </div>
     <div class="footer">
-
+      <p>These menus are accurate as of 2022</p>
     </div>
 </section>
 </body>
