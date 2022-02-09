@@ -27,9 +27,9 @@
       border: 2px;
       border-bottom: #599cad;
     }
-    .leftSide {
+    .leftSide {<!menu>
       grid-area: leftSide;
-      width: 100px;
+      width: 130px;
       background-color: black;
       color: #f1fad1;
       border-color: #559cad;
@@ -45,6 +45,7 @@
     }
   .rightSide{
       grid-area: rightSide;
+      width: 130px;
     }
   .footer {
     grid-area: footer;
@@ -79,6 +80,7 @@
   p{
     font-family: monospace;
     color: #274690;
+    text-align: center;
   }
   button{
     display: inline-flex;
@@ -111,14 +113,15 @@
     position: relative;
     float: left;
     width: 80%;
-    height: 40px;
+    height: 42px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    color: #f1fad1;
-    background-color: black;
+    color: #000000;
+    background-color: #f1fad1;
     border: double;
     border-radius: 8px;
     top: 50%;
+    left: 20px;
   }
   .sbutton{<!search bar button>
     display:inline-grid;
@@ -133,9 +136,10 @@
     margin: auto;
     cursor: pointer;
     float: left;
+    left:22px;
     height: 50px;
     top:50%;
-    width: 19%;
+    width: 14%;
   }
   input[type=text]:focus {
   width: 80%;
@@ -151,7 +155,7 @@
       <div>
         <h1>Raving Craving</h1>
         <img src="https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/RCLogo_Final-removebg-preview.png" width=120px height=120px align ="left"/>
-        <button type="button" class="button abutton">About Us</button>
+        <a href="#"><button type="button" class="button abutton">About Us</button></a>
       </div>
     </div>
     <div class="leftSide">
@@ -166,7 +170,7 @@
 
     </div>
     <div class="footer">
-      <p>These menus are accurate as of 2022</p>
+      <strong><p>These menus are accurate as of January 2022</p></strong>
     </div>
 </section>
 </body>
