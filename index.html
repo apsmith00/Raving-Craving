@@ -29,31 +29,31 @@
     }
     .leftSide {<!menu>
       grid-area: leftSide;
-      width: 130px;
-      background-color: black;
-      color: #f1fad1;
+      width: 1px;
+      border: 1px solid;
       border-color: #559cad;
-      border: none;
-      text-align: center;
     }
     .body{
       grid-area: body;
       height: 500px;
-      background-color: #559cad;
       border: double;
-      border-color: #f1fad1;
+      border-color: #559cad;
+      background-image: url(https://raw.githubusercontent.com/apsmith00/Raving-Craving/main/content/vecteezy_memphis-sign-on-mud-island-memphis-tennessee_3247689.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
     }
   .rightSide{
       grid-area: rightSide;
-      width: 130px;
+      width: 1px;
+      border: 1px solid;
+      border-color: #559cad;
     }
   .footer {
     grid-area: footer;
     background-color: black;
-    border: EnableCodeIndexing;
+    border: 1px solid;
     border-top: #559cad;
     height: auto;
-    color: #f1fad1;
   }
   h1{
         background-color:black;
@@ -79,8 +79,14 @@
   }
   p{
     font-family: monospace;
-    color: #274690;
+    color: #559cad ;
     text-align: center;
+    top: 300px;
+    font-style: normal;
+    font-size: 30px;
+    text-decoration: underline;
+    position: relative;
+    text-shadow: 3px 3px 2px black;
   }
   button{
     display: inline-flex;
@@ -117,9 +123,9 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     color: #000000;
-    background-color: #f1fad1;
+    background-color: white;
     border: double;
-    border-radius: 8px;
+    border-radius: 100px;
     top: 50%;
     left: 20px;
   }
@@ -129,7 +135,7 @@
     border: double;
     background-color: #559cad;
     color: white;
-    border-radius: 8px;
+    border-radius: 100px;
     position:relative;
     justify-content: center;
     align-items: center;
@@ -165,12 +171,13 @@
         <input type="text" placeholder="example search : Salmon" name="search">
         <button type="submit" class= "sbutton abutton"><i>Search</i></button>
       </form>
+      <strong><p>Pick for Me</p></strong>
     </div>
     <div class="rightSide">
 
     </div>
     <div class="footer">
-      <strong><p>These menus are accurate as of January 2022</p></strong>
+
     </div>
 </section>
 </body>
