@@ -3,6 +3,7 @@
 <head>
     <title> Raving Craving </title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <basefont face ="Playfair Display","Verdana">
       <style>
         body{background-color: black;}
@@ -11,15 +12,16 @@
 <body>
   <style>
     .layout { <!divides html doc in containers>
-    width: auto;
-    height: auto;
-    display: grid;
-    grid:
-      "header header header" auto
-      "leftSide body rightSide" 1fr
-      "footer footer footer" auto
-      / auto 1fr auto;
-    gap: 0px;
+      border-color: white;
+      width: auto;
+      height: auto;
+      display: grid;
+      grid:
+        "header header header" auto
+        "leftSide body rightSide" 1fr
+        "footer footer footer" auto
+        / auto 1fr auto;
+      gap: 0px;
     }
     .header {
       grid-area: header;
