@@ -13,6 +13,18 @@
 </head>
 <body>
   <style>
+  .layout { <!divides html doc in containers>
+    border-color: white;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid:
+      "header header header" auto
+      "body body body" auto
+      "footer footer footer" auto
+      / auto 1fr auto;
+    gap: 0px;
+  }
     body{
       background-repeat: no-repeat;
       background-position: left top;

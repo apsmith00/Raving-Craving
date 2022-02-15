@@ -115,6 +115,7 @@
     top: 30px;
     text-decoration: underline;
     font-size: 22px;
+    font-size: 4vh;
     font-family: inherit;
     transition-duration: .4s;
     cursor: pointer;
@@ -124,7 +125,7 @@
     color: #f1fad1;
   }
   input[type=text]{
-    position: relative;
+    position: static;
     float: left;
     width: 80%;
     height: 42px;
@@ -147,7 +148,7 @@
     background-color: #559cad;
     color: white;
     border-radius: 100px;
-    position:relative;
+    position:static;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -158,12 +159,22 @@
     top:50%;
     width: 14%;
   }
+  .bcontain{
+    background-color: #f1fad1;
+    height: 55px;
+    width: 90%;
+    border-radius: 10px;
+    align-items: center;
+    padding-top: 3px;
+    padding-left: 100px;
+  }
   input[type=text]:focus {
   width: 80%;
   border-color: #f1fad1;
   background-color: black;
   color: white;
   font-family: fantasy;
+  position: static;
   }
   form{
     top: 50%;
@@ -184,8 +195,10 @@
     </div>
     <div class="body">
       <form action=""><!results>
+        <div class="bcontain">
         <input type="text" placeholder="What are you hungry for?" name="search">
         <button type="submit" class= "sbutton abutton"><i>Search</i></button>
+        </div>
       </form>
       <a href="#"><strong><p>Pick for Me</p></strong></a>
       <a href="#"><strong><p>What's Hot</p></strong></a>
