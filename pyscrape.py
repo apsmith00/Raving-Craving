@@ -14,7 +14,6 @@ column_names=["restaurant","entree","price","description","cuisine"]
 global elist
 elist =pd.DataFrame(columns=column_names)
 lst=[]
-r=0
 for a in soup.find_all('a', href=True): 
     if a.text: 
         links.append(a['href'])
@@ -35,15 +34,30 @@ def scrape(r_link):
     s=BeautifulSoup(html,"html.parser")
     if(success(r_link)!=True):
         print("Link Error")
-        return -1;
+        return
     else:
-        print("Success")
         global cuisine
-        cuisine= s.find("a", class_="menu-tags").text
-        dollar_rating = s.find("span", class_="active-dollar").text
+        cuisine= s.find("a", class_="menu-tags")
+        if(cuisine == None):
+            cuisine="N/A"
+        else:
+            cuisine = cuisine.text
+        dollar_rating = s.find("span", class_="active-dollar", string= True)#.text
+        if(dollar_rating==None):
+            dollar_rating="N/A"
+        else:
+            dollar_rating=dollar_rating.text
         address= s.find("a", class_="menu-address").text
-        r_name=s.find("p", class_="title-header s-link").text
-        number=s.find("a",class_="menu-phone-number phone-number-stickynav").text
+        r_name=s.find("p", class_="title-header s-link")
+        if(r_name==None):
+            r_name="N/A"
+        else:
+            r_name=r_name.text
+        number=s.find("a",class_="menu-phone-number phone-number-stickynav")
+        if(number==None):
+            number="N/A"
+        else:
+            number=number.text
         items=[]
         for i in s.find_all("li",class_="menu-items"):
             items.append(i)
@@ -56,7 +70,17 @@ def scrape(r_link):
                 lst.append(row)
                 global elist
         df=pd.DataFrame(lst, columns=column_names)
-        df.to_csv(r"C:\Users\alexa\temp1.csv",encoding='utf-8',index=True)
-    
-scrape("https://www.allmenus.com/tn/memphis/30350-china-wok/menu/")
+        return df
+def scrape_all(r_links):
+    f_scrape = pd.DataFrame(columns = column_names)
+    for x in r_links:
+        f = scrape(x)
+        f_scrape=pd.concat([f],ignore_index=True)
+    return f_scrape
+def main():
+    final=scrape_all(complete_links)
+    final.to_csv(r"C:\Users\alexa\fulllist.csv",encoding='utf-8',index=True)
+main()
+print("Finished")
+#scrape("https://www.allmenus.com/tn/memphis/30350-china-wok/menu/")
     
