@@ -1,0 +1,15 @@
+chicken
+meat
+ribs
+rib
+poultry
+steak
+bbq
+wings
+ham
+turkey
+sausage
+pepperoni
+bacon
+beef
+pork
